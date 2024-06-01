@@ -1,10 +1,10 @@
 import axios from "axios";
-import { object } from "zod";
+
 
 export class DepthManager {
     private market: string;
     private bids: {
-        [key: string]: string
+        [key: string]: string 
     };
     private asks: {
         [key: string]: string
