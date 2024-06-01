@@ -42,9 +42,7 @@ export const creatOrder = (side: "buy" | "shell", market: string, price: number,
             })
         
         })
-    
 }
-
 export const cancelOrder = (market: string) => {
     return  new Promise<void>((resolve) => {
         const body = {

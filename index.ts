@@ -1,6 +1,7 @@
 import axios from "axios";
 import { DepthManager } from "./DepthManeger";
 import { cancelOrder, creatOrder } from "./order";
+
  const solInrMarket =  new DepthManager("B-XAI_INR");
 
  const usdtInrMarket  = new DepthManager("B-USDT_INR");
@@ -13,9 +14,7 @@ import { cancelOrder, creatOrder } from "./order";
       console.log(usdtInrMarket.getRelaventDepth());
       console.log(solUsdtMarket.getRelaventDepth());
 
-      // TEHRE ARE TWO SIDES YOU CAN SIT ON
-      // SHELL SOL FOR INR, BUY USDT FROM INR , BUY FROM INR
-      //LETS SAY I START WITH 1 SOL
+   
       
     const cangetIninr = solInrMarket.getRelaventDepth().higestBid - 0.001;
     const cangetUsdt = cangetIninr/usdtInrMarket.getRelaventDepth().lowestAsk;
